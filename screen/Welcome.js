@@ -7,7 +7,6 @@ export default function Welcome() {
             <View style={{ flex: 1.5, justifyContent: 'center', alignItems: 'center', }}>
                 <Text style={styles.text}>Easy Note</Text>
                 <Text style={styles.textz}>Your Thoughts, Effortlessly Captured</Text>
-
             </View>
 
             <View style={{ flex: 4.1, justifyContent: 'center', alignItems: 'center', }}>
@@ -18,8 +17,7 @@ export default function Welcome() {
 
                 <TouchableOpacity style={styles.button}  >
                     <Image style={{ width: 25, height: 20, position: 'relative', top: 20, left: 90 }} source={require('./assets/icons8-arrow-100.png')} />
-                    <Text style={{ color: 'white', fontSize: 23, position: 'relative', bottom: 7 , fontFamily:'FredokaOne-Regular'}}>Get Started</Text>
-
+                    <Text style={{ color: 'white', fontSize: 23, position: 'relative', bottom: 7, fontFamily: 'FredokaOne-Regular' }}>Get Started</Text>
                 </TouchableOpacity>
 
             </View>
@@ -43,8 +41,6 @@ const styles = StyleSheet.create({
         textShadowColor: 'rgba(0, 0, 0, 0.45)',
         textShadowOffset: { width: 2, height: 1.2 },
         textShadowRadius: 10,
-
-
     },
     textz: {
 
@@ -55,7 +51,6 @@ const styles = StyleSheet.create({
         textShadowColor: 'rgba(0, 0, 0, 0.45)',
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 8
-
     },
 
     image: {
