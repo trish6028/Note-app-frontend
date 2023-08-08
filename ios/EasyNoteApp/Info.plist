@@ -54,6 +54,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>FredokaOne-Regular.ttf</string>
+		<string>Gluten-Regular.ttf</string>
+		<string>LilitaOne-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

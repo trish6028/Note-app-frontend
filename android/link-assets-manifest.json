@@ -4,6 +4,14 @@
     {
       "path": "screen/assets/fonts/FredokaOne-Regular.ttf",
       "sha1": "4bec41d88c7ac1372114ec8a315a37a3e6bf4df3"
+    },
+    {
+      "path": "screen/assets/fonts/Gluten-Regular.ttf",
+      "sha1": "3dacd9520526c5bc55a6f366b351260ac9ad245b"
+    },
+    {
+      "path": "screen/assets/fonts/LilitaOne-Regular.ttf",
+      "sha1": "3a4f50ed3543a0d3291ef171aeee5408072559bd"
     }
   ]
 }
