@@ -1,9 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import Login from './screen/Login'
-import NoteList from './screen/NoteList'
 import { NavigationContainer } from '@react-navigation/native';
+import Welcome from './screen/Welcome';
+import Login from './screen/Login';
+import NoteList from './screen/NoteList';
+import { createStackNavigator } from '@react-navigation/stack';
 
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
@@ -12,7 +15,14 @@ export default function App() {
     // </View>
 
     <NavigationContainer>
-      <NoteList />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Welcome" component={Welcome} />
+       
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="NoteList" component={NoteList} />
+    </Stack.Navigator>
+
+      
     </NavigationContainer>
   )
 }

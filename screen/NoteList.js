@@ -10,7 +10,7 @@ export default function NoteList() {
 
     useEffect(() => {
         loadData();
-        console.log("hutto");
+         
     }, []);
 
     const loadData = () => {

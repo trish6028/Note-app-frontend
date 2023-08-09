@@ -1,9 +1,20 @@
-import { View, Text, KeyboardAvoidingView, StyleSheet, ImageBackground, Image, TextInput, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { View,Alert, Text, KeyboardAvoidingView, StyleSheet, ImageBackground, Image, TextInput, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react';
 
 
+export default function Login({navigation}) {
 
-export default function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+
+const handleLoginPress = () => {
+  if (username == 'trishan' && password == '1234') {
+    navigation.navigate('NoteList'); 
+  } else {
+    Alert.alert('Authentication Failed', 'Invalid username or password.');
+  }
+};
 
 
 
@@ -22,16 +33,22 @@ export default function Login() {
             style={styles.input}
             placeholder="Username"
             placeholderTextColor="white"
+            value={username}
+            onChangeText={setUsername}
           />
           <TextInput
             style={styles.input}
             placeholder="Password"
             placeholderTextColor="white"
+            secureTextEntry={true}
+            value={password}
+            onChangeText={setPassword}
+
           />
         </View>
 
         <View style={{ flex: 3, justifyContent: 'center', alignItems: 'center' }}>
-          <TouchableOpacity style={styles.button}  >
+          <TouchableOpacity  onPress={handleLoginPress} style={styles.button}  >
             <Text style={{ color: 'white', fontSize: 28, position: 'relative', top: 14, fontFamily: 'LilitaOne-Regular' }}>log in</Text>
           </TouchableOpacity>
         </View>
@@ -95,3 +112,4 @@ const styles = StyleSheet.create({
 
 
 });
+ 
