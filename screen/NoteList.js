@@ -20,8 +20,7 @@ export default function NoteList() {
             .then((json) => setData(json))
 
     };
-
-
+    
     return (
         <View style={styles.container}>
             <ImageBackground source={require('./assets/7722074368.png')} resizeMode="cover" style={styles.image}>
@@ -44,15 +43,12 @@ export default function NoteList() {
                                     <Text>Name: {item.name}</Text>
                                     <Text>Address: {item.address}</Text>
                                     <Text>Salary: {item.salary}</Text>
-
                                 </View>
                             );
                         }}
                         keyExtractor={(item) => item.id}
                     />
                 </View>
-
-
             </ImageBackground>
         </View>
 
@@ -95,6 +91,6 @@ const styles = StyleSheet.create({
         margin: 8,
         right: 0,
         top: 0,
-      },
+    },
 
 });
