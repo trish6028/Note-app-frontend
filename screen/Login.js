@@ -9,10 +9,20 @@ export default function Login({navigation}) {
 
 
 const handleLoginPress = () => {
-  if (username == 'trishan' && password == '1234') {
-    navigation.navigate('NoteList'); 
+  if (username =='' && password == '') {
+    Alert.alert('Login Error', 'Please enter your username and password.');
+  } else if (username === '') {
+    Alert.alert('Login Error', 'Please enter your username.');
+  } else if (password === '') {
+    Alert.alert('Login Error', 'Please enter your password.');
+  } else if (username !== 'trishan' && password !== '1234') {
+    Alert.alert('Login Failed', 'Your username and password are incorrect.');
+  } else if (username !== 'trishan') {
+    Alert.alert('Login Failed', 'Your username is incorrect.');
+  } else if (password !== '1234') {
+    Alert.alert('Login Failed', 'Your password is incorrect.');
   } else {
-    Alert.alert('Authentication Failed', 'Invalid username or password.');
+    navigation.navigate('NoteList');
   }
 };
 
