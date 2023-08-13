@@ -22,7 +22,7 @@ const handleLoginPress = () => {
   } else if (password !== '1234') {
     Alert.alert('Login Failed', 'Your password is incorrect.');
   } else {
-    navigation.navigate('NoteList');
+    navigation.navigate('DrawerNav');
   }
 };
 
@@ -60,6 +60,9 @@ const handleLoginPress = () => {
         <View style={{ flex: 3, justifyContent: 'center', alignItems: 'center' }}>
           <TouchableOpacity  onPress={handleLoginPress} style={styles.button}  >
             <Text style={{ color: 'white', fontSize: 28, position: 'relative', top: 14, fontFamily: 'LilitaOne-Regular' }}>log in</Text>
+          </TouchableOpacity>
+          <TouchableOpacity  onPress={()=>navigation.navigate('SignUp')} style={styles.button}  >
+            <Text style={{ color: 'white', fontSize: 28, position: 'relative', top: 14, fontFamily: 'LilitaOne-Regular' }}>sign up</Text>
           </TouchableOpacity>
         </View>
 

@@ -10,7 +10,7 @@ export default function ItemDetailScreen({ route }) {
       <Text>Name: {item.name}</Text>
       <Text>Address: {item.address}</Text>
       <Text>Salary: {item.salary}</Text>
-      {/* ... additional details as needed ... */}
+      
     </View>
   );
 }
