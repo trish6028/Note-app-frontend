@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function Welcome({navigation}) {
+export default function Welcome({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={{ flex: 1.5, justifyContent: 'center', alignItems: 'center', }}>
@@ -15,7 +15,7 @@ export default function Welcome({navigation}) {
 
             <View style={{ flex: 3.2, backgroundColor: '#C5B7FE', width: 391, borderTopStartRadius: 55, borderTopEndRadius: 55, justifyContent: 'center', }}>
 
-                <TouchableOpacity onPress={()=>navigation.navigate('Login')} style={styles.button}  >
+                <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.button}  >
                     <Image style={{ width: 25, height: 20, position: 'relative', top: 20, left: 90 }} source={require('./assets/icons8-arrow-100.png')} />
                     <Text style={{ color: 'white', fontSize: 23, position: 'relative', bottom: 7, fontFamily: 'FredokaOne-Regular' }}>Get Started</Text>
                 </TouchableOpacity>
