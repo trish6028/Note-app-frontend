@@ -301,9 +301,13 @@ export default function NoteList({ navigation }) {
   }
 
 
+
+
   const formatDateTime = dateTime => {
     return moment(dateTime).format('MMMM Do YYYY, h:mm:ss a');
   };
+
+
 
 
   const loadData = () => {
@@ -317,6 +321,7 @@ export default function NoteList({ navigation }) {
       });
 
   };
+
 
   useEffect(() => {
     loadData();
@@ -334,6 +339,7 @@ export default function NoteList({ navigation }) {
   };
 
 
+
   const handleImageSelect = () => {
     const options = {
       mediaType: 'photo',
@@ -346,6 +352,8 @@ export default function NoteList({ navigation }) {
       }
     });
   };
+
+
 
   const handleSaveNote = () => {
     if (note.trim() === '') {
@@ -363,6 +371,9 @@ export default function NoteList({ navigation }) {
     );
   };
 
+
+
+
   const deleteNote = async id => {
     try {
       const response = await fetch(`${baseUrl}/api/notes/deleteNote/${id}`, {
@@ -379,6 +390,9 @@ export default function NoteList({ navigation }) {
       console.error('Error deleting note:', error);
     }
   };
+
+
+
 
 
   const updateAllNote = () => {
@@ -420,12 +434,16 @@ export default function NoteList({ navigation }) {
     );
   };
 
+
+
   const updateNote = item => {
     setUpdatedNote(item.note);
     setSelectedItem(item);
     setModalVisible(true);
 
   };
+
+
 
   const saveNoteToDatabase = async () => {
     try {
@@ -475,6 +493,9 @@ export default function NoteList({ navigation }) {
     }
   };
 
+
+
+
   const optionsOverlay = (
     <View style={styles.optionsOverlay}>
 
@@ -523,6 +544,10 @@ export default function NoteList({ navigation }) {
     </View>
   );
 
+
+
+
+
   return (
     <View style={styles.container}>
       <ImageBackground source={require('./assets/7722074368.png')} resizeMode="cover" style={styles.image}>
@@ -536,6 +561,7 @@ export default function NoteList({ navigation }) {
           <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={styles.container}>
+
             <Modal visible={modalVisible} animationType="fade">
               <View style={styles.modalContent}>
                 <ScrollView style={{ marginTop: 20 }}>
@@ -577,6 +603,7 @@ export default function NoteList({ navigation }) {
                 </ScrollView>
               </View>
             </Modal>
+            
           </KeyboardAvoidingView>
         </View>
 
